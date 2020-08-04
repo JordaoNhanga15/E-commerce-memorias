@@ -253,6 +253,7 @@ section{background: #ececec;}
     padding: 10px 10px;
     max-width: 600px;
     background: aliceblue;
+    overflow: hidden;
     margin: auto;
 }
 #contact form .place{
@@ -283,7 +284,53 @@ section{background: #ececec;}
     outline: none;
 }
 #contact form textarea,input:focus{border: 2px solid rgb(126, 122, 122)}
+#contact .place{
+    display: flex;
+    justify-content: center;
+}
+#contact  button{
+    margin: 5px 0px;
+    padding: 10px 50px;
+    outline: none;
+    color: aliceblue;
+    background: var(--back-a);
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: all 1s ease-in;
+    border: 0px;
+    border-radius: 20px;
+}
+#contact  button:hover{
+    background: #9C1C28;
+    color: black;
+}
+.button {
+    animation: down 3s forwards ease-in ;
+}
 
+@keyframes down{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes no_no{
+    0%,100%{
+        transform: translateX(0%);
+    }
+    35%{
+        transform: translateX(-20%);
+    }
+    70%{
+        transform: translateX(20%);
+    }
+}
+.no_no{
+    animation: no_no 1s linear  2  forwards;
+}
 #footer{
     padding: 20px; 
     text-align: center;
